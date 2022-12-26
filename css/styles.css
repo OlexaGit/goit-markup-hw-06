@@ -173,7 +173,8 @@ footer {
 .form-field input::placeholder {
   padding: 8px 212px 8px 16px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
 }
 .form-field label {
   margin-bottom: 16px;
@@ -287,8 +288,8 @@ footer {
 }
 .modal {
   position: absolute;
-  min-width: 408px;
-  min-height: 576px;
+  width: 408px;
+  height: 584px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -313,6 +314,58 @@ footer {
 .icon-close {
   color: #000000;
   fill: currentColor;
+}
+.form-mw {
+  /* width: 360px; */
+  padding: 72px 24px 24px;
+}
+.form-mw p {
+  color: var(--background-color);
+  margin-bottom: 16px;
+}
+.form-field-mw {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form-field-mw:not(:last-child) {
+  margin-bottom: 8px;
+  /* height: 40px; */
+}
+.comment {
+  height: 120px;
+}
+.form-field-mw label {
+  font-size: 12px;
+  line-height: 1.33;
+  margin-bottom: 4px;
+  color: #8e8f99;
+}
+.form-field-mw input {
+  width: 360px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: inherit;
+}
+.form-field-mw input::placeholder {
+  /* padding-top: 8px; */
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(117, 117, 117, 0.5);
+}
+.privacy-policy {
+  margin: 16px 0px 24px;
+  color: #8e8f99;
+}
+.button-mw {
+  display: inline;
+  width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  margin-bottom: 0px;
+  background-color: var(--accent-color-logo);
 }
 /*--------------------- modal window (end)------------ */
 
