@@ -289,7 +289,6 @@ footer {
 .modal {
   position: absolute;
   width: 408px;
-  height: 584px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -306,17 +305,20 @@ footer {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  color: #000000;
   background-color: var(--text-background-color-footer);
   border: 1px solid rgb(0, 0, 0, 0.1);
-  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
+  transition: background-color 250ms var(--cubic-bezier), color 250ms var(--cubic-bezier);
+}
+.icon-link:hover,
+.icon-link:focus {
+  color: #ffffff;
+  background-color: var(--background-focus-btn);
 }
 .icon-close {
-  color: #000000;
   fill: currentColor;
 }
 .form-mw {
-  /* width: 360px; */
   padding: 72px 24px 24px;
 }
 .form-mw p {
@@ -327,13 +329,10 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: left;
+  position: relative;
 }
 .form-field-mw:not(:last-child) {
   margin-bottom: 8px;
-  /* height: 40px; */
-}
-.comment {
-  height: 120px;
 }
 .form-field-mw label {
   font-size: 12px;
@@ -343,13 +342,19 @@ footer {
 }
 .form-field-mw input {
   width: 360px;
-
+  height: 40px;
+  padding-left: 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: inherit;
 }
-.form-field-mw input::placeholder {
-  /* padding-top: 8px; */
+textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field-mw textarea::placeholder {
+  padding-top: 8px;
   padding-left: 16px;
   font-size: 12px;
   line-height: 1.17;
@@ -359,6 +364,18 @@ footer {
   margin: 16px 0px 24px;
   color: #8e8f99;
 }
+.privacy-policy input {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--background-color);
+  border-radius: 2px;
+  background-color: var(--accent-color-logo);
+}
+.privacy-policy label {
+  color: #757575;
+  font-size: 12px;
+  line-height: 1.33px;
+}
 .button-mw {
   display: inline;
   width: 169px;
@@ -367,8 +384,24 @@ footer {
   margin-bottom: 0px;
   background-color: var(--accent-color-logo);
 }
+.name-mw-icon {
+  position: absolute;
+  top: 28px;
+  left: 16px;
+  display: inline-block;
+  width: 22px;
+  height: 24px;
+  color: var(--background-color);
+  /* background-color: var(--background-color); */
+  transition: color 250ms var(--cubic-bezier);
+}
+.form-field-mw:focus-within > .name-mw-icon {
+  color: var(--accent-color-logo);
+}
+.form-field-mw input:focus {
+  outline: 1px solid var(--accent-color-logo);
+}
 /*--------------------- modal window (end)------------ */
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
