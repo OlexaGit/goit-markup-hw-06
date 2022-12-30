@@ -383,6 +383,11 @@ textarea {
   padding: 16px 32px;
   margin-bottom: 0px;
   background-color: var(--accent-color-logo);
+  transition: background-color 250ms var(--cubic-bezier);
+}
+.button-mw:hover,
+.button-mw:focus {
+  background-color: var(--background-focus-btn);
 }
 .name-mw-icon {
   position: absolute;
@@ -392,7 +397,6 @@ textarea {
   width: 22px;
   height: 24px;
   color: var(--background-color);
-  /* background-color: var(--background-color); */
   transition: color 250ms var(--cubic-bezier);
 }
 .form-field-mw:focus-within > .name-mw-icon {
@@ -401,6 +405,13 @@ textarea {
 .form-field-mw input:focus {
   outline: 1px solid var(--accent-color-logo);
 }
+.form-field-mw textarea:focus {
+  outline: 1px solid var(--accent-color-logo);
+}
+.privacy-policy {
+  color: var(--accent-color-logo);
+}
+
 /*--------------------- modal window (end)------------ */
 .visually-hidden {
   position: absolute;
