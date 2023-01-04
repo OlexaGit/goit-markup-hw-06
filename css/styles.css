@@ -133,13 +133,12 @@ footer {
 }
 .form {
   display: flex;
-  width: 533px;
-  height: 80px;
+  margin-left: 80px;
 }
 .form-field {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+
   margin-bottom: 0;
 }
 .form-field input {
@@ -152,10 +151,12 @@ footer {
   background-color: inherit;
 }
 .form-field input::placeholder {
-  padding: 8px 212px 8px 16px;
   font-size: 12px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.6);
+}
+.form-input {
+  padding: 8px 212px 8px 16px;
 }
 .form-field label {
   margin-bottom: 16px;
@@ -170,6 +171,7 @@ footer {
   margin-bottom: 0px;
   border-radius: 4px;
   background-color: var(--accent-color-logo);
+  transition: background-color 250ms var(--cubic-bezier);
 }
 .icon-footer {
   margin-left: 16px;
@@ -214,13 +216,13 @@ footer {
     url(../images/people-office.jpg);
 }
 .primery-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 56px;
   text-align: center;
   line-height: 1.07;
   letter-spacing: 0.02em;
   margin: 0 auto 48px auto;
-  width: 492px;
+  width: 496px;
 }
 .modal-btn {
   font-family: inherit;
@@ -327,15 +329,19 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: inherit;
+  outline: transparent;
+  transition: border-color 250ms var(--cubic-bezier);
 }
 textarea {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-.form-field-mw textarea::placeholder {
   padding-top: 8px;
   padding-left: 16px;
+  outline: transparent;
+  transition: border-color 250ms var(--cubic-bezier);
+}
+.form-field-mw textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   color: rgba(117, 117, 117, 0.5);
@@ -355,7 +361,7 @@ textarea {
 }
 .name-mw-icon {
   position: absolute;
-  top: 28px;
+  top: 50%;
   left: 16px;
   display: inline-block;
   width: 22px;
@@ -367,10 +373,11 @@ textarea {
   color: var(--accent-color-logo);
 }
 .form-field-mw input:focus {
-  outline: 1px solid var(--accent-color-logo);
+  /* outline: 1px solid var(--accent-color-logo); */
+  border-color: var(--accent-color-logo);
 }
 .form-field-mw textarea:focus {
-  outline: 1px solid var(--accent-color-logo);
+  border-color: var(--accent-color-logo);
 }
 .privacy-policy {
   margin: 16px 0px 24px;
